@@ -52,7 +52,7 @@ public void setLokasiruang(String lokasiruang) {
 }
 
 
-//Setter n Getter untuk Kondisi Ruang Kelas, ini yang dibuat zulfikar
+//Setter n Getter untuk Kondisi Ruang Kelas, method ini yang nambahin gue
 public Double getPanjangruang() {
 	return panjangruang;
 }
