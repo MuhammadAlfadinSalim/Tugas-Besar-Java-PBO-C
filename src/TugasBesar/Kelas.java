@@ -7,11 +7,16 @@ private String prodi, namaruang, bentukruang, lokasiruang; // variable untuk ide
 private Double panjangruang, lebarruang;
 private int jumlahkursi, jumlahpintu, jumlahjendela; // variable untuk kondisi ruang
 
-private String jumlahsteker, kondisisteker, posisisteker, jumlahkabellcd,
-kondisikabellcd, posisikabellcd, jumlahlampu,
-posisilampu, jumlahkipasangin, kondisikipasangin,
-posisikipasangin, jumlahac, kondisiac, posisiac, ssid,
-bandwidth, jumlahcctv, kondisicctv, posisicctv; // variable untuk kondisi sarana ruang
+private String kondisisteker, posisisteker,
+kondisikabellcd, posisikabellcd,
+posisilampu, kondisilampu,
+kondisikipasangin, posisikipasangin, 
+kondisiac, posisiac,  
+kondisicctv, posisicctv,
+ssid;
+private Double bandwidth;
+private int jumlahsteker, jumlahkabellcd, jumlahlampu, jumlahkipasangin, jumlahac, jumlahcctv;
+// variable untuk kondisi sarana ruang
 
 
 private String kondisilantai, kondisidinding,
@@ -86,10 +91,10 @@ public void setJumlahjendela(int jumlahjendela) {
 
 
 //Setter n Getter untuk jumlah,kondisi, dan posisi sarana
-public String getJumlahsteker() {
+public int getJumlahsteker() {
     return jumlahsteker;
 }
-public void setJumlahsteker(String jumlahsteker) {
+public void setJumlahsteker(int jumlahsteker) {
     this.jumlahsteker = jumlahsteker;
 }
 public String getKondisisteker() {
@@ -104,10 +109,10 @@ public String getPosisisteker() {
 public void setPosisisteker(String posisisteker) {
     this.posisisteker = posisisteker;
 }
-public String getJumlahkabellcd() {
+public int getJumlahkabellcd() {
     return jumlahkabellcd;
 }
-public void setJumlahkabellcd(String jumlahkabellcd) {
+public void setJumlahkabellcd(int jumlahkabellcd) {
     this.jumlahkabellcd = jumlahkabellcd;
 }
 public String getKondisikabellcd() {
@@ -122,11 +127,17 @@ public String getPosisikabellcd() {
 public void setPosisikabellcd(String posisikabellcd) {
     this.posisikabellcd = posisikabellcd;
 }
-public String getJumlahlampu() {
+public int getJumlahlampu() {
     return jumlahlampu;
 }
-public void setJumlahlampu(String jumlahlampu) {
+public void setJumlahlampu(int jumlahlampu) {
     this.jumlahlampu = jumlahlampu;
+}
+public String getKondisilampu() {
+    return kondisilampu;
+}
+public void setKondisilampu(String kondisilampu) {
+    this.kondisilampu = kondisilampu;
 }
 public String getPosisilampu() {
     return posisilampu;
@@ -134,10 +145,10 @@ public String getPosisilampu() {
 public void setPosisilampu(String posisilampu) {
     this.posisilampu = posisilampu;
 }
-public String getJumlahkipasangin() {
+public int getJumlahkipasangin() {
     return jumlahkipasangin;
 }
-public void setJumlahkipasangin(String jumlahkipasangin) {
+public void setJumlahkipasangin(int jumlahkipasangin) {
     this.jumlahkipasangin = jumlahkipasangin;
 }
 public String getKondisikipasangin() {
@@ -152,10 +163,10 @@ public String getPosisikipasangin() {
 public void setPosisikipasangin(String posisikipasangin) {
     this.posisikipasangin = posisikipasangin;
 }
-public String getJumlahac() {
+public int getJumlahac() {
     return jumlahac;
 }
-public void setJumlahac(String jumlahac) {
+public void setJumlahac(int jumlahac) {
     this.jumlahac = jumlahac;
 }
 public String getKondisiac() {
@@ -176,16 +187,16 @@ public String getSsid() {
 public void setSsid(String ssid) {
     this.ssid = ssid;
 }
-public String getBandwidth() {
+public Double getBandwidth() {
     return bandwidth;
 }
-public void setBandwidth(String bandwidth) {
+public void setBandwidth(Double bandwidth) {
     this.bandwidth = bandwidth;
 }
-public String getJumlahcctv() {
+public int getJumlahcctv() {
     return jumlahcctv;
 }
-public void setJumlahcctv(String jumlahcctv) {
+public void setJumlahcctv(int jumlahcctv) {
     this.jumlahcctv = jumlahcctv;
 }
 public String getKondisicctv() {
