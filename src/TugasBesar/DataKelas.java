@@ -58,7 +58,7 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 	String Kondisisteker = scan.nextLine();
 	kls.setKondisisteker(Kondisisteker);
 	
-	System.out.print("posisi steker ; ");
+	System.out.print("posisi steker : ");
 	String Posisisteker = scan.nextLine();
 	kls.setPosisisteker(Posisisteker);
 	
@@ -70,7 +70,7 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 	String Kondisilcd = scan.nextLine();
 	kls.setKondisisteker(Kondisilcd);
 	
-	System.out.print("posisi lcd ; ");
+	System.out.print("posisi lcd : ");
 	String Posisilcd = scan.nextLine();
 	kls.setPosisisteker(Posisilcd);
 	
@@ -82,7 +82,7 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 	String Kondisilampu = scan.nextLine();
 	kls.setKondisilampu(Kondisilampu);
 	
-	System.out.print("posisi lampu ; ");
+	System.out.print("posisi lampu : ");
 	String Posisilampu = scan.nextLine();
 	kls.setPosisilampu(Posisilampu);
 	
@@ -94,7 +94,7 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 	String Kondisikipasangin = scan.nextLine();
 	kls.setKondisisteker(Kondisikipasangin);
 	
-	System.out.print("posisi kipas angin ; ");
+	System.out.print("posisi kipas angin : ");
 	String Posisikipasangin = scan.nextLine();
 	kls.setPosisikipasangin(Posisikipasangin);
 	
@@ -106,7 +106,7 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 	String Kondisiac = scan.nextLine();
 	kls.setKondisiac(Kondisiac);
 	
-	System.out.print("posisi ac ; ");
+	System.out.print("posisi ac : ");
 	String Posisiac = scan.nextLine();
 	kls.setPosisiac(Posisiac);
 	
@@ -118,7 +118,7 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 	String Kondisicctv = scan.nextLine();
 	kls.setKondisicctv(Kondisicctv);
 	
-	System.out.print("posisi cctv ; ");
+	System.out.print("posisi cctv : ");
 	String Posisicctv = scan.nextLine();
 	kls.setPosisicctv(Posisicctv);
 	
@@ -126,24 +126,89 @@ void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
 }
 
 void setlingkungankelas(){   //method untuk penentuan lingkungan dalam kelas
+	System.out.print("\nKondisi Lantai :" );
+	String kondisilantai = scan.nextLine();
+	kls.setKondisilantai(kondisilantai);
+	
+	System.out.print("\nKondisi Dinding :" );
+	String kondisidinding = scan.nextLine();
+	kls.setKondisidinding(kondisidinding);
+	
+	System.out.print("\nKondisi Atap :" );
+	String kondisiatap = scan.nextLine();
+	kls.setKondisiatap(kondisiatap);
+	
+	System.out.print("\nKondisi Pintu :" );
+	String kondisipintu = scan.nextLine();
+	kls.setKondisipintu(kondisipintu);
+	
+	System.out.print("\nKondisi Jendela :" );
+	String kondisijendela = scan.nextLine();
+	kls.setKondisijendela(kondisijendela);
 	
 }
 
 
 void setkebersihankelas(){   //method untuk penentuan kebersihan kelas
+	System.out.print("\nSirkulasi Udara : ");
+	String sirkulasi = scan.nextLine();
+	kls.setSirkulasi(sirkulasi);
 	
+	System.out.print("\nPencahayaan : ");
+	Double pencahayaan = scan.nextDouble();
+	kls.setPencahayaan(pencahayaan);
+	
+	System.out.print("\nKelembapan : ");
+	Double kelembapan = scan.nextDouble();
+	kls.setKelembapan(kelembapan);
+	
+	System.out.print("\nSuhu : ");
+	Double suhu = scan.nextDouble();
+	kls.setSuhu(suhu);
 	
 }
 
 
 void setkenyamanankelas(){   //method untuk penentuan kenyamanan dalam kelas
+	System.out.print("\nKebisingan : ");
+	String kebisingan = scan.nextLine();
+	kls.setKebisingan(kebisingan);
 	
+	System.out.print("\nBau : ");
+	String bau = scan.nextLine();
+	kls.setBau(bau);
+	
+	System.out.print("\nKebocoran : ");
+	String kebocoran = scan.nextLine();
+	kls.setKebocoran(kebocoran);
+	
+	System.out.print("\nKerusakan : ");
+	String kerusakan = scan.nextLine();
+	kls.setKerusakan(kerusakan);
+	
+	System.out.print("\nKeausan : ");
+	String keausan = scan.nextLine();
+	kls.setKeausan(keausan);
 	
 }
 
 
 void setkeamanankelas(){   //method untuk penentuan keamanan dalam kelas
+	System.out.print("\nKekokohan : ");
+	String kekokohan = scan.nextLine();
+	kls.setKekokohan(kekokohan);
 	
+	System.out.print("\nKunci Pintu : ");
+	String kuncipintu = scan.nextLine();
+	kls.setKuncipintu(kuncipintu);
+	
+	System.out.print("\nKunci Jendela : ");
+	String kuncijendela = scan.nextLine();
+	kls.setKuncijendela(kuncijendela);
+	
+	System.out.print("\nBahaya : ");
+	String bahaya = scan.nextLine();
+	kls.setBahaya(bahaya);
 	
 }
 
