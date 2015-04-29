@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class DataKelas {
 Kelas kls = new Kelas();
 Scanner scan = new Scanner(System.in);
-
+Double luasruang, rasioruang;
 
 //method di bawah ini untuk inputan data . . .
 
@@ -214,13 +214,30 @@ void setkeamanankelas(){   //method untuk penentuan keamanan dalam kelas
 
 
 
-
+void procdataruang(){
+	luasruang = kls.getPanjangruang() * kls.getLebarruang();
+	rasioruang = luasruang / kls.getJumlahkursi();
+}
+void prockondisisarana(){
+	
+}
+void proclingkungankelas(){
+	
+}
+void prockebersihankelas(){
+	
+}
+void prockenyamanankelas(){
+	
+}
+void prockeamanankelas(){
+	
+}
 
 
 //method-method dibawah ini untuk menampilkan output an . . .
 
 void getdataruang(){
-	Double luasruang, rasioruang;
 	System.out.print("\nProdi : "+kls.getProdi());
 	System.out.print("\nNama Ruang : "+kls.getNamaruang());
 	System.out.print("\nLokasi Ruang : "+kls.getLokasiruang());
@@ -230,9 +247,9 @@ void getdataruang(){
 	System.out.print("\nJumlah Kursi : "+kls.getJumlahkursi());
 	System.out.print("\nJumlah Pintu : "+kls.getJumlahpintu());
 	System.out.print("\nJumlah Jendela : "+kls.getJumlahjendela());
-	luasruang = kls.getPanjangruang() * kls.getLebarruang();
+	
 	System.out.print("\nLuas Ruang : "+luasruang);
-	rasioruang = luasruang / kls.getJumlahkursi();
+	
 	System.out.print("\nRasio Ruang : "+rasioruang);
 }
 
