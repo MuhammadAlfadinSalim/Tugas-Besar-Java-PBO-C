@@ -6,6 +6,7 @@ public class KelasLauncher {
 	data.setdataruang();
 	data.procdataruang();
 	data.getdataruang();
-	//data.prockondisisarana();
+	data.prockondisisarana();
+        data.getkondisisarana();
 	}
 }
