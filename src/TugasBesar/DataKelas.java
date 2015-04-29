@@ -4,6 +4,7 @@ public class DataKelas {
 Kelas kls = new Kelas();
 Scanner scan = new Scanner(System.in);
 Double luasruang, rasioruang;
+String x = "Sesuai", y = "Tidak Sesuai";
 
 //method di bawah ini untuk inputan data . . .
 
@@ -13,7 +14,7 @@ void setdataruang(){    //method untuk penghitungan data ruang
 	String prodi = scan.nextLine();
 	kls.setProdi(prodi);
 	
-	System.out.print("Nama Ruang : ");
+	System.out.print("\nNama Ruang : ");
 	String namaruang = scan.nextLine();
 	kls.setNamaruang(namaruang);
 	
@@ -21,9 +22,9 @@ void setdataruang(){    //method untuk penghitungan data ruang
 	String lokasiruang = scan.nextLine();
 	kls.setLokasiruang(lokasiruang);
 	
-	System.out.print("Bentuk Ruang : ");
-	String bentukruang = scan.nextLine();
-	kls.setBentukruang(bentukruang);
+	//System.out.print("Bentuk Ruang : ");
+	//String bentukruang = scan.nextLine();
+	//kls.setBentukruang(bentukruang);
 	
 	System.out.print("Panjang Ruang : ");
 	Double panjangruang = scan.nextDouble();
@@ -153,6 +154,7 @@ void setkebersihankelas(){   //method untuk penentuan kebersihan kelas
 	System.out.print("\nSirkulasi Udara : ");
 	String sirkulasi = scan.nextLine();
 	kls.setSirkulasi(sirkulasi);
+	System.out.print("\n1. Lancar     2. Tidak Lancar");
 	
 	System.out.print("\nPencahayaan : ");
 	Double pencahayaan = scan.nextDouble();
@@ -213,18 +215,43 @@ void setkeamanankelas(){   //method untuk penentuan keamanan dalam kelas
 }
 
 
-
 void procdataruang(){
 	luasruang = kls.getPanjangruang() * kls.getLebarruang();
 	rasioruang = luasruang / kls.getJumlahkursi();
+	if (kls.getPanjangruang() != kls.getLebarruang()){
+		String a = "Persegi Panjang";
+		kls.setBentukruang(a);
+		System.out.print("\nBentuk Ruang : "+a);
+		if (kls.getBentukruang().equals(a)){
+		System.out.print("\n"+x );
+	}
+	else {
+		System.out.print("\nBentuk Ruang : Persegi");
+		System.out.print("\n"+x);
+	}
+	}
+	if (kls.getJumlahpintu() >= 2 && kls.getJumlahkursi() >= 1){
+		System.out.print("\n"+x);
+	}
 }
+
 void prockondisisarana(){
+	// Milik Zul
 	
 }
+
 void proclingkungankelas(){
+	if (kls.getSirkulasi() == "1"){
+		
+	}
 	
 }
 void prockebersihankelas(){
+	if (kls.getKondisilantai() == "Bersih" && kls.getKondisidinding() == "Bersih" &&
+		kls.getKondisiatap() == "Bersih" && kls.getKondisipintu() == "Bersih" &&
+		kls.getKondisijendela() == "Bersih"){
+	System.out.print("\n"+x);
+	}
 	
 }
 void prockenyamanankelas(){
@@ -241,7 +268,7 @@ void getdataruang(){
 	System.out.print("\nProdi : "+kls.getProdi());
 	System.out.print("\nNama Ruang : "+kls.getNamaruang());
 	System.out.print("\nLokasi Ruang : "+kls.getLokasiruang());
-	System.out.print("\nBentuk Ruang : "+kls.getBentukruang());
+	//System.out.print("\nBentuk Ruang : "+kls.getBentukruang());
 	System.out.print("\nPanjang Ruang : "+kls.getPanjangruang());
 	System.out.print("\nLebar Ruang : "+kls.getLebarruang());
 	System.out.print("\nJumlah Kursi : "+kls.getJumlahkursi());
@@ -253,24 +280,39 @@ void getdataruang(){
 	System.out.print("\nRasio Ruang : "+rasioruang);
 }
 
-String getkondisisarana(){
-	return "sesuai";
+void getkondisisarana(){
+	// milik Zul
+	
 	
 }
 
 void getlingkungankelas(){
-	
+	System.out.print("\nSirkulasi Udara : "+kls.getSirkulasi());
+	System.out.print("\nNilai Pencahayaan : "+kls.getPencahayaan());
+	System.out.print("\nkelembapan : "+kls.getKelembapan());
+	System.out.print("\nSuhu : "+kls.getSuhu());
 }
 
 void getkebersihankelas(){
-	
+	System.out.print("\nKondisi Lantai : "+kls.getKondisilantai());
+	System.out.print("\nKondisi Dinding : "+kls.getKondisidinding());
+	System.out.print("\nKondisi Atap : "+kls.getKondisiatap());
+	System.out.print("\nKondisi Pintu : "+kls.getKondisipintu());
+	System.out.print("\nKondisi Jendela : "+kls.getKondisijendela());
 }
 
 void getkenyamanankelas(){
-	
+	System.out.print("\nKebisingan : "+kls.getKebisingan());
+	System.out.print("\nBau : "+kls.getBau());
+	System.out.print("\nKebocoran : "+kls.getKebocoran());
+	System.out.print("\nKerusakan : "+kls.getKerusakan());
+	System.out.print("\nKeausan : "+kls.getKeausan());
 }
 
 void getkeamanankelas(){
-	
+	System.out.print("\nKekokohan : "+kls.getKekokohan());
+	System.out.print("\nKunci Pintu : "+kls.getKuncipintu());
+	System.out.print("\nKunci Jendela : "+kls.getKuncijendela());
+	System.out.print("\nBahaya : "+kls.getBahaya());
 }
 }
