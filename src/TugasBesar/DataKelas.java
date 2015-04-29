@@ -48,9 +48,7 @@ void setdataruang(){    //method untuk penghitungan data ruang
 
 	
 	
-}
-
-void setkondisisarana(){  //method untuk penentuan kondisi sarana kelas
+        //method untuk penentuan kondisi sarana kelas
 	System.out.print("Jumlah Stop Kontak/Steker : ");
 	int jumlahsteker = scan.nextInt();
 	kls.setJumlahsteker(jumlahsteker);
