@@ -237,6 +237,21 @@ void procdataruang(){
 
 void prockondisisarana(){
 	// Milik Zul
+	if(kls.getJumlahsteker() >= 4){
+            System.out.print("\n"+x);
+        }
+        String b = "baik";
+        kls.setKondisisteker(b);
+        if(kls.getKondisisteker().equals(b)){
+            System.out.print("\n"+x);
+        }
+        String c = "pojok ruangan";
+        String d = "dekat dosen";
+        kls.setPosisisteker(c);
+        kls.setPosisisteker(d);
+        if(kls.getPosisisteker().equals(c)&&kls.getPosisisteker().equals(d)){
+            System.out.println(""+x);
+        }
 	
 }
 
@@ -281,8 +296,9 @@ void getdataruang(){
 }
 
 void getkondisisarana(){
-	// milik Zul
-	
+	System.out.print("\nJumlah Stop Kontak / Steker : "+kls.getJumlahsteker());
+	System.out.print("\nKondisi Stop Kontak / Steker : "+kls.getKondisisteker());
+    	System.out.print("\nPosisi Stop Kontak / Steker : "+kls.getPosisisteker());
 	
 }
 
