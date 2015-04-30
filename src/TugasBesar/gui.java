@@ -10,6 +10,10 @@ import java.awt.Button;
 
 public class gui extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**

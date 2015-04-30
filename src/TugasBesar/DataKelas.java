@@ -8,25 +8,27 @@ String x = "Sesuai", y = "Tidak Sesuai";
 
 //method di bawah ini untuk inputan data . . .
 
-void setdataruang(){    //method untuk penghitungan data ruang
+void setidentitasruang(){    //method untuk penghitungan data ruang
 	
 	System.out.print("Prodi : ");
 	String prodi = scan.nextLine();
 	kls.setProdi(prodi);
 	
-	System.out.print("\nNama Ruang : ");
+	System.out.print("Nama Ruang : ");
 	String namaruang = scan.nextLine();
 	kls.setNamaruang(namaruang);
 	
 	System.out.print("Lokasi Ruang : ");
 	String lokasiruang = scan.nextLine();
 	kls.setLokasiruang(lokasiruang);
-	
+}
+
+void setkondisiruang(){
 	//System.out.print("Bentuk Ruang : ");
 	//String bentukruang = scan.nextLine();
 	//kls.setBentukruang(bentukruang);
 	
-	System.out.print("Panjang Ruang : ");
+	System.out.print("\nPanjang Ruang : ");
 	Double panjangruang = scan.nextDouble();
 	kls.setPanjangruang(panjangruang);
 	
@@ -45,11 +47,13 @@ void setdataruang(){    //method untuk penghitungan data ruang
 	System.out.print("Jumlah Jendela : ");
 	int jumlahjendela = scan.nextInt();
 	kls.setJumlahjendela(jumlahjendela);
+}
 
+void setkondisisarana(){
 	
 	
         //method untuk penentuan kondisi sarana kelas
-	System.out.print("Jumlah Stop Kontak/Steker : ");
+	System.out.print("\nJumlah Stop Kontak/Steker : ");
 	int jumlahsteker = scan.nextInt();
 	kls.setJumlahsteker(jumlahsteker);
 	
@@ -212,8 +216,11 @@ void setkeamanankelas(){   //method untuk penentuan keamanan dalam kelas
 	
 }
 
+void procidentitasruang(){
+	
+}
 
-void procdataruang(){
+String prockondisiruang(){
 	luasruang = kls.getPanjangruang() * kls.getLebarruang();
 	rasioruang = luasruang / kls.getJumlahkursi();
 	if (kls.getPanjangruang() != kls.getLebarruang()){
@@ -225,12 +232,23 @@ void procdataruang(){
 	}
 	else {
 		System.out.print("\nBentuk Ruang : Persegi");
+		System.out.print("\n"+y);
+	}
+	}
+	if (kls.getJumlahpintu() >= 2 && kls.getJumlahjendela() >= 1){
 		System.out.print("\n"+x);
 	}
+	else {
+		System.out.print("\n"+y);
 	}
-	if (kls.getJumlahpintu() >= 2 && kls.getJumlahkursi() >= 1){
+	if (rasioruang >= 0.5){
 		System.out.print("\n"+x);
+		return "Sesuai";
 	}
+	else {
+		System.out.print("\n"+y);
+	}
+	return "Sesuai";
 }
 
 void prockondisisarana(){
@@ -268,28 +286,42 @@ void prockebersihankelas(){
 	
 }
 void prockenyamanankelas(){
-	
+	if (kls.getKebisingan() == "tidak bising" && kls.getBau() == "tidak bau" &&
+		kls.getKebocoran() == "tidak bocor" && kls.getKerusakan() == "tidak rusak" &&
+		kls.getKeausan() == "tidak aus"){
+	System.out.print("\n"+x);
+	}
+	else{
+	System.out.print("\n"+y);
+	}
 }
 void prockeamanankelas(){
-	
+	if (kls.getKekokohan() == "kokoh" && kls.getKuncipintu() == "ada" &&
+		kls.getKuncijendela() == "ada" && kls.getBahaya() == "aman"){
+	System.out.print("\n"+x);
+	}
+	else{
+	System.out.print("\n"+y);
+	}
 }
 
 
 //method-method dibawah ini untuk menampilkan output an . . .
 
-void getdataruang(){
+void getidentitasruang(){
 	System.out.print("\nProdi : "+kls.getProdi());
 	System.out.print("\nNama Ruang : "+kls.getNamaruang());
 	System.out.print("\nLokasi Ruang : "+kls.getLokasiruang());
 	//System.out.print("\nBentuk Ruang : "+kls.getBentukruang());
+}	
+	
+void getkondisiruang(){
 	System.out.print("\nPanjang Ruang : "+kls.getPanjangruang());
 	System.out.print("\nLebar Ruang : "+kls.getLebarruang());
 	System.out.print("\nJumlah Kursi : "+kls.getJumlahkursi());
 	System.out.print("\nJumlah Pintu : "+kls.getJumlahpintu());
 	System.out.print("\nJumlah Jendela : "+kls.getJumlahjendela());
-	
 	System.out.print("\nLuas Ruang : "+luasruang);
-	
 	System.out.print("\nRasio Ruang : "+rasioruang);
 }
 
