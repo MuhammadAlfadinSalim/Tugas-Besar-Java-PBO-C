@@ -256,17 +256,13 @@ void prockondisisarana(){
 	if(kls.getJumlahsteker() >= 4){
             System.out.print("\n"+x);
         }
-        String b = "baik";
-        kls.setKondisisteker(b);
-        if(kls.getKondisisteker().equals(b)){
+        
+        if(kls.getKondisisteker().equals("baik")){
             System.out.print("\n"+x);
         }
-        String c = "pojok ruangan";
-        String d = "dekat dosen";
-        kls.setPosisisteker(c);
-        kls.setPosisisteker(d);
-        if(kls.getPosisisteker().equals(c)&&kls.getPosisisteker().equals(d)){
-            System.out.println(""+x);
+        
+        if(kls.getPosisisteker().equals("pojok ruangan")&&kls.getPosisisteker().equals("dekat dosen")){
+            System.out.println("\n"+x);
         }
 	
 }
