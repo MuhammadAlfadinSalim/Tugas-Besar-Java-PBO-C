@@ -270,9 +270,31 @@ void prockondisisarana(){
         }else {
             System.out.print("\n"+y);
         }
+        
+        if(kls.getJumlahkabellcd() >= 1){
+            System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getKondisikabellcd().equals("baik")){
+            System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
+        }
 	
+        if(kls.getPosisikabellcd().equals("dekat dosesn")){
+            System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getJumlahlampu()>=18 && kls.getKondisilampu().equals("baik")){
+            System.out.print("\n"+x);
+        }else{
+            System.out.print("\n"+y);
+        }
 }
-
 
 void proclingkungankelas(){
 	if (kls.getSirkulasi() == "1"){
