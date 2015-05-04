@@ -255,17 +255,24 @@ void prockondisisarana(){
 	// Milik Zul
 	if(kls.getJumlahsteker() >= 4){
             System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
         }
         
         if(kls.getKondisisteker().equals("baik")){
             System.out.print("\n"+x);
+        }else {
+            System.out.print("\n"+y);
         }
         
         if(kls.getPosisisteker().equals("pojok ruangan")&&kls.getPosisisteker().equals("dekat dosen")){
             System.out.println("\n"+x);
+        }else {
+            System.out.print("\n"+y);
         }
 	
 }
+
 
 void proclingkungankelas(){
 	if (kls.getSirkulasi() == "1"){
