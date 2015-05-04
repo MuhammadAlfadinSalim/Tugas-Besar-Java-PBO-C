@@ -5,7 +5,7 @@ Kelas kls = new Kelas();
 Scanner scan = new Scanner(System.in);
 Double luasruang, rasioruang;
 String x = "Sesuai", y = "Tidak Sesuai";
-
+Double n = 0.0, persen;
 //method di bawah ini untuk inputan data . . .
 
 void setidentitasruang(){    //method untuk penghitungan data ruang
@@ -128,7 +128,7 @@ void setkondisisarana(){
 	
 }
 
-void setlingkungankelas(){   //method untuk penentuan lingkungan dalam kelas
+void setkebersihankelas(){   //method untuk penentuan kebersihan kelas
 	System.out.print("\nKondisi Lantai :" );
 	String kondisilantai = scan.nextLine();
 	kls.setKondisilantai(kondisilantai);
@@ -152,11 +152,11 @@ void setlingkungankelas(){   //method untuk penentuan lingkungan dalam kelas
 }
 
 
-void setkebersihankelas(){   //method untuk penentuan kebersihan kelas
+void setlingkungankelas(){   //method untuk penentuan lingkungan dalam kelas
 	System.out.print("\nSirkulasi Udara : ");
 	String sirkulasi = scan.nextLine();
 	kls.setSirkulasi(sirkulasi);
-	System.out.print("\n1. Lancar     2. Tidak Lancar");
+	//System.out.print("\n1. Lancar     2. Tidak Lancar");
 	
 	System.out.print("\nPencahayaan : ");
 	Double pencahayaan = scan.nextDouble();
@@ -220,35 +220,159 @@ void procidentitasruang(){
 	
 }
 
-String prockondisiruang(){
+void prockondisiruang(){
 	luasruang = kls.getPanjangruang() * kls.getLebarruang();
 	rasioruang = luasruang / kls.getJumlahkursi();
-	if (kls.getPanjangruang() != kls.getLebarruang()){
-		String a = "Persegi Panjang";
-		kls.setBentukruang(a);
-		System.out.print("\nBentuk Ruang : "+a);
-		if (kls.getBentukruang().equals(a)){
-		System.out.print("\n"+x );
+	
+	if (+kls.getPanjangruang() != +kls.getLebarruang()) //1
+	{
+		n = n + 1;
+		//return x;
+		if (rasioruang >= 0.5) //2
+		{
+			n = n + 1;	
+			//return x;
+			if (kls.getJumlahpintu() >= 2) //3
+			{
+				n = n + 1;
+				//return x;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+			}
+			else //3
+			{
+				n = n - 1;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+				//return y;
+			}
+		}
+		else // 2 
+		{
+			n = n + 0;
+			if (kls.getJumlahpintu() >= 2) //3
+			{
+				n = n + 1;
+				//return x;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+			}
+			else //3
+			{
+				n = n + 0;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+				//return y;
+			}
+		}
 	}
-	else {
-		System.out.print("\nBentuk Ruang : Persegi");
-		System.out.print("\n"+y);
+	else // 1 
+	{
+		n = n + 0;
+		//return y;
+		if (rasioruang >= 0.5) //2
+		{
+			n = n + 1;	
+			//return x;
+			if (kls.getJumlahpintu() >= 2) //3
+			{
+				n = n + 1;
+				//return x;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+			}
+			else //3
+			{
+				n = n + 0;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+				//return y;
+			}
+		}
+		else // 2 
+		{
+			n = n + 0;
+			if (kls.getJumlahpintu() >= 2) //3
+			{
+				n = n + 1;
+				//return x;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+			}
+			else //3
+			{
+				n = n + 0;
+				if (kls.getJumlahjendela() >= 1) //4
+				{
+					n = n + 1;
+					//return x;
+				}
+				else //4 
+				{
+					n = n + 0;
+					//return y;
+				}
+				//return y;
+			}
+		}
 	}
-	}
-	if (kls.getJumlahpintu() >= 2 && kls.getJumlahjendela() >= 1){
-		System.out.print("\n"+x);
-	}
-	else {
-		System.out.print("\n"+y);
-	}
-	if (rasioruang >= 0.5){
-		System.out.print("\n"+x);
-		return "Sesuai";
-	}
-	else {
-		System.out.print("\n"+y);
-	}
-	return "Sesuai";
+	persen = (n*100)/4;	
 }
 
 void prockondisisarana(){
@@ -272,36 +396,172 @@ void prockondisisarana(){
 }
 
 void proclingkungankelas(){
-	if (kls.getSirkulasi() == "1"){
-		
+	if (kls.getSirkulasi().equals("lancar"))
+	{
+		n = n + 1;
+		if (+kls.getPencahayaan() >= 250 && +kls.getPencahayaan() <= 350)
+		{
+			n = n + 1;
+			if (+kls.getKelembapan() >= 70 && +kls.getKelembapan() <= 80)
+			{
+				n = n + 1;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+			else
+			{
+				n = n + 0;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+		}
+		else
+		{
+			n = n + 0;
+			if (+kls.getKelembapan() >= 70 && +kls.getKelembapan() <= 80)
+			{
+				n = n + 1;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+			else
+			{
+				n = n + 0;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+		}
 	}
+	else
+	{
+		n = n + 0;
+		if (+kls.getPencahayaan() >= 250 && +kls.getPencahayaan() <= 350)
+		{
+			n = n + 1;
+			if (+kls.getKelembapan() >= 70 && +kls.getKelembapan() <= 80)
+			{
+				n = n + 1;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+			else
+			{
+				n = n + 0;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+		}
+		else
+		{
+			n = n + 0;
+			if (+kls.getKelembapan() >= 70 && +kls.getKelembapan() <= 80)
+			{
+				n = n + 1;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+			else
+			{
+				n = n + 0;
+				if (+kls.getSuhu() >= 25 && +kls.getSuhu() <= 35)
+				{
+					n = n + 1;
+				}
+				else
+				{
+					n = n + 0;
+				}
+			}
+		}
+	}
+	persen = (n*100)/4;	
+			
 	
 }
-void prockebersihankelas(){
-	if (kls.getKondisilantai() == "Bersih" && kls.getKondisidinding() == "Bersih" &&
-		kls.getKondisiatap() == "Bersih" && kls.getKondisipintu() == "Bersih" &&
-		kls.getKondisijendela() == "Bersih"){
-	System.out.print("\n"+x);
+
+String prockebersihankelas(){
+	if (kls.getKondisilantai() == "Bersih" 
+		&& kls.getKondisidinding() == "Bersih" 
+		&& kls.getKondisiatap() == "Bersih" 
+		&& kls.getKondisipintu() == "Bersih" 
+		&& kls.getKondisijendela() == "Bersih")
+	{
+		return x;
 	}
-	
-}
-void prockenyamanankelas(){
-	if (kls.getKebisingan() == "tidak bising" && kls.getBau() == "tidak bau" &&
-		kls.getKebocoran() == "tidak bocor" && kls.getKerusakan() == "tidak rusak" &&
-		kls.getKeausan() == "tidak aus"){
-	System.out.print("\n"+x);
-	}
-	else{
-	System.out.print("\n"+y);
+	else 
+	{
+		return y;
 	}
 }
-void prockeamanankelas(){
-	if (kls.getKekokohan() == "kokoh" && kls.getKuncipintu() == "ada" &&
-		kls.getKuncijendela() == "ada" && kls.getBahaya() == "aman"){
-	System.out.print("\n"+x);
+
+String prockenyamanankelas(){
+	if (kls.getKebisingan() == "tidak bising" 
+		&& kls.getBau() == "tidak bau" 
+		&& kls.getKebocoran() == "tidak bocor" 
+		&& kls.getKerusakan() == "tidak rusak" 
+		&& kls.getKeausan() == "tidak aus")
+	{
+		return x;
 	}
-	else{
-	System.out.print("\n"+y);
+	else
+	{
+		return y;
+	}
+}
+
+String prockeamanankelas(){
+	if (kls.getKekokohan() == "kokoh" 
+		&& kls.getKuncipintu() == "ada" 
+		&& kls.getKuncijendela() == "ada" 
+		&& kls.getBahaya() == "aman")
+	{
+		return x;
+	}
+	else
+	{
+		return y;
 	}
 }
 
@@ -323,6 +583,10 @@ void getkondisiruang(){
 	System.out.print("\nJumlah Jendela : "+kls.getJumlahjendela());
 	System.out.print("\nLuas Ruang : "+luasruang);
 	System.out.print("\nRasio Ruang : "+rasioruang);
+	//System.out.print(prockondisiruang());
+	System.out.print("\nJumlah Sesuai = "+n);
+	
+	System.out.print("\nKesesuaian = "+persen + "%");
 }
 
 void getkondisisarana(){
@@ -337,6 +601,8 @@ void getlingkungankelas(){
 	System.out.print("\nNilai Pencahayaan : "+kls.getPencahayaan());
 	System.out.print("\nkelembapan : "+kls.getKelembapan());
 	System.out.print("\nSuhu : "+kls.getSuhu());
+	System.out.print("\nJumlah Sesuai = "+n);
+	System.out.print("\nKesesuaian = "+persen + "%");
 }
 
 void getkebersihankelas(){

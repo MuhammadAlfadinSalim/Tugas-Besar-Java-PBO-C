@@ -213,7 +213,7 @@ public void setPosisicctv(String posisicctv) {
 }
 
 
-//Setter n Getter untuk lingkungan ruang kelas
+//Setter n Getter untuk kebersihan kelas
 public String getKondisilantai() {
 	return kondisilantai;
 }
