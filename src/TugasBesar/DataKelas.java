@@ -379,22 +379,78 @@ void prockondisisarana(){
 	// Milik Zul
 	if(kls.getJumlahsteker() >= 4){
             System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
         }
-        String b = "baik";
-        kls.setKondisisteker(b);
-        if(kls.getKondisisteker().equals(b)){
+        
+        if(kls.getKondisisteker().equals("baik")){
             System.out.print("\n"+x);
+        }else {
+            System.out.print("\n"+y);
         }
-        String c = "pojok ruangan";
-        String d = "dekat dosen";
-        kls.setPosisisteker(c);
-        kls.setPosisisteker(d);
-        if(kls.getPosisisteker().equals(c)&&kls.getPosisisteker().equals(d)){
-            System.out.println(""+x);
+        
+        if(kls.getPosisisteker().equals("pojok ruangan")&&kls.getPosisisteker().equals("dekat dosen")){
+            System.out.println("\n"+x);
+        }else {
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getJumlahkabellcd() >= 1){
+            System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getKondisikabellcd().equals("baik")){
+            System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
         }
 	
+        if(kls.getPosisikabellcd().equals("dekat dosesn")){
+            System.out.print("\n"+x);
+        } else {
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getJumlahlampu()>=18 && kls.getKondisilampu().equals("baik") && kls.getPosisikabellcd().equals("atap ruangan")){
+            System.out.print("\n"+x);
+        }else{
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getJumlahkipasangin()>=2 && kls.getKondisikipasangin().equals("baik") && kls.getPosisikipasangin().equals("atap ruangan")){
+        System.out.print("\n"+x);
+        } else{
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getJumlahac()>=1 &&  kls.getKondisiac().equals("baik") && kls.getPosisiac().equals("Belakang")){
+            System.out.print("\n"+x);
+        }else{
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getSsid().equals("UMM Hotspot")){
+            System.out.print("\n"+x);
+        } else{
+            System.out.print("\n"+y);
+        }
+        
+        if(kls.getJumlahcctv()> 2 && kls.getKondisicctv().equals("baik")){
+            System.out.print("\n"+x);
+        }else{
+            System.out.print("\n"+y);
+        }
+        if(kls.getPosisicctv().equals("depan")){
+            if(kls.getPosisicctv().equals("belakang")){
+                System.out.print("\n"+x);
+            }
+        }else{
+            System.out.print("\n"+y);
+        }
+        
 }
-
 void proclingkungankelas(){
 	if (kls.getSirkulasi().equals("lancar"))
 	{
