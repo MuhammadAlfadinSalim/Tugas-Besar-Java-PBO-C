@@ -5,14 +5,23 @@ public class KelasLauncher {
 	DataKelas data = new DataKelas();
 	//data.setidentitasruang();
 	//data.setkondisiruang();
-	data.setlingkungankelas();
 	//data.setkondisisarana();
+	//data.setlingkungankelas();
+	//data.setkebersihankelas();
+	//data.setkenyamanankelas();
+	data.setkeamanankelas();
+	///////////////////////////////////////////////////////////////
 	//data.prockondisiruang();
-	data.proclingkungankelas();
 	//data.prockondisisarana();
+	//data.proclingkungankelas();
+	//data.prockebersihankelas();
+	data.prockeamanankelas();
+	///////////////////////////////////////////////////////////////
 	//data.getidentitasruang();
 	//data.getkondisiruang();
-	data.getlingkungankelas();
-    //data.getkondisisarana();
+	//data.getkondisisarana();
+	//data.getlingkungankelas();
+    //data.getkebersihankelas();
+    data.getkeamanankelas();
 	}
 }
