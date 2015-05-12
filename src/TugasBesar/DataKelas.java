@@ -6,7 +6,7 @@ Scanner scan = new Scanner(System.in);
 Double luasruang, rasioruang;
 String x = "Sesuai", y = "Tidak Sesuai"; 
 String a1,a2,a3,a4;
-String b1,b2,b3,b4;
+String b1,b2,b3,b4,b5,b6,b7;
 String c1,c2,c3,c4;
 String d1,d2,d3,d4,d5;
 String e1,e2,e3,e4,e5;
