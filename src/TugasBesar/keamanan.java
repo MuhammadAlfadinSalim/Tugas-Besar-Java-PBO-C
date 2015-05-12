@@ -2,7 +2,8 @@ package TugasBesar;
 
 public class keamanan extends DataKelas{
 
-	void setkeamanankelas(){   //method untuk penentuan keamanan dalam kelas
+	@Override
+	void in() {
 		System.out.print("\nKekokohan : ");
 		String kekokohan = scan.nextLine();
 		kls.setKekokohan(kekokohan);
@@ -17,10 +18,11 @@ public class keamanan extends DataKelas{
 		
 		System.out.print("Bahaya : ");
 		String bahaya = scan.nextLine();
-		kls.setBahaya(bahaya);	
+		kls.setBahaya(bahaya);
 	}
-	
-	void prockeamanankelas(){
+
+	@Override
+	void proc() {
 		if (kls.getKekokohan().equalsIgnoreCase("kokoh")){
 			f1 =x;
 			n6 = n6 + 1;
@@ -158,12 +160,13 @@ public class keamanan extends DataKelas{
 		}
 		persen6 = (n6*100)/4;
 	}
-	
-	void getkeamanankelas(){
-		System.out.print("\n\nKekokohan /t  : "+kls.getKekokohan() +"  (" + ""+f1 +")");
-		System.out.print("\nKunci Pintu /t  : "+kls.getKuncipintu() +"  (" + ""+f2 +")");
-		System.out.print("\nKunci Jendela /t: "+kls.getKuncijendela() +"  (" + ""+f3 +")");
-		System.out.print("\nBahaya /t       : "+kls.getBahaya() +"  (" + ""+f4 +")");
+
+	@Override
+	void out() {
+		System.out.print("\n\nKekokohan  	: "+kls.getKekokohan() +"  (" + ""+f1 +")");
+		System.out.print("\nKunci Pintu  	: "+kls.getKuncipintu() +"  (" + ""+f2 +")");
+		System.out.print("\nKunci Jendela	: "+kls.getKuncijendela() +"  (" + ""+f3 +")");
+		System.out.print("\nBahaya			: "+kls.getBahaya() +"  (" + ""+f4 +")");
 		System.out.print("\nJumlah Sesuai = "+n6);
 		System.out.print("\nKesesuaian = "+persen6 + "%");
 	}

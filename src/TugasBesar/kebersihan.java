@@ -1,7 +1,9 @@
 package TugasBesar;
 
 public class kebersihan extends DataKelas{
-	void setkebersihankelas(){   //method untuk penentuan kebersihan kelas
+
+	@Override
+	void in() {
 		System.out.print("\nKondisi Lantai :" );
 		String kondisilantai = scan.nextLine();
 		kls.setKondisilantai(kondisilantai);
@@ -22,9 +24,10 @@ public class kebersihan extends DataKelas{
 		String kondisijendela = scan.nextLine();
 		kls.setKondisijendela(kondisijendela);	
 	}
-	
-	
-	void prockebersihankelas(){
+
+
+	@Override
+	void proc() {
 		if (kls.getKondisilantai().equalsIgnoreCase("bersih"))
 		{
 			d1 = x;
@@ -339,7 +342,8 @@ public class kebersihan extends DataKelas{
 	}
 
 	
-	void getkebersihankelas(){
+	@Override
+	void out() {
 		System.out.print("\n\nKondisi Lantai : "+kls.getKondisilantai() +"  (" + ""+d1 +")");
 		System.out.print("\nKondisi Dinding : "+kls.getKondisidinding() +"  (" + ""+d2 +")");
 		System.out.print("\nKondisi Atap : "+kls.getKondisiatap() +"  (" + ""+d3 +")");

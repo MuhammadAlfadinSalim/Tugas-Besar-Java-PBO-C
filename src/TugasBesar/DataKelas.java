@@ -1,6 +1,6 @@
 package TugasBesar;
 import java.util.Scanner;
-public class DataKelas {
+public abstract class DataKelas {
 Kelas kls = new Kelas();
 Scanner scan = new Scanner(System.in);
 Double luasruang, rasioruang;
@@ -18,31 +18,9 @@ Double n3 = 0.0, persen3;
 Double n4 = 0.0, persen4;
 Double n5 = 0.0, persen5;
 Double n6 = 0.0, persen6;
-//method di bawah ini untuk inputan data . . .
+//method di bawah ini untuk semua subclasses . . .
 
-void setidentitasruang(){    //method untuk penghitungan data ruang
-	
-	System.out.print("Prodi : ");
-	String prodi = scan.nextLine();
-	kls.setProdi(prodi);
-	
-	System.out.print("Nama Ruang : ");
-	String namaruang = scan.nextLine();
-	kls.setNamaruang(namaruang);
-	
-	System.out.print("Lokasi Ruang : ");
-	String lokasiruang = scan.nextLine();
-	kls.setLokasiruang(lokasiruang);
-}
-
-void procidentitasruang(){
-	
-}
-
-void getidentitasruang(){
-	System.out.print("\nProdi : "+kls.getProdi());
-	System.out.print("\nNama Ruang : "+kls.getNamaruang());
-	System.out.print("\nLokasi Ruang : "+kls.getLokasiruang());
-}	
-	
+abstract void in();
+abstract void proc();
+abstract void out();
 }

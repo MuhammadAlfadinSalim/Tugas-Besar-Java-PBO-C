@@ -2,7 +2,8 @@ package TugasBesar;
 
 public class lingkungan extends DataKelas{
 
-	void setlingkungankelas(){   //method untuk penentuan lingkungan dalam kelas
+	@Override
+	void in() {
 		System.out.print("\nSirkulasi Udara (lancar / tidak) : ");
 		String sirkulasi = scan.next();
 		kls.setSirkulasi(sirkulasi);
@@ -19,8 +20,10 @@ public class lingkungan extends DataKelas{
 		Double suhu = scan.nextDouble();
 		kls.setSuhu(suhu);
 	}
+
 	
-	void proclingkungankelas(){
+	@Override
+	void proc() {
 		if (kls.getSirkulasi().equals("lancar"))
 		{
 			c1 = x;
@@ -171,10 +174,12 @@ public class lingkungan extends DataKelas{
 				}
 			}
 		}
-		persen3 = (n3*100)/4;		
+		persen3 = (n3*100)/4;
 	}
+
 	
-	void getlingkungankelas(){
+	@Override
+	void out() {
 		System.out.print("\n\nSirkulasi Udara : "+kls.getSirkulasi() +"  (" + ""+c1 +")");
 		System.out.print("\nNilai Pencahayaan : "+kls.getPencahayaan() +"  (" + ""+c2 +")");
 		System.out.print("\nkelembapan : "+kls.getKelembapan() +"  (" + ""+c3 +")");

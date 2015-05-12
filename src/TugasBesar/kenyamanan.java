@@ -1,8 +1,9 @@
 package TugasBesar;
 
 public class kenyamanan extends DataKelas{
-	
-	void setkenyamanankelas(){   //method untuk penentuan kenyamanan dalam kelas
+
+	@Override
+	void in() {
 		System.out.print("\nKebisingan : ");
 		String kebisingan = scan.nextLine();
 		kls.setKebisingan(kebisingan);
@@ -21,10 +22,11 @@ public class kenyamanan extends DataKelas{
 		
 		System.out.print("Keausan : ");
 		String keausan = scan.nextLine();
-		kls.setKeausan(keausan);	
+		kls.setKeausan(keausan);
 	}
-	
-	void prockenyamanankelas(){
+
+	@Override
+	void proc() {
 		if (kls.getKebisingan().equalsIgnoreCase("tidak bising"))
 		{
 			e1 = x;
@@ -338,7 +340,8 @@ public class kenyamanan extends DataKelas{
 		persen5 = (n5*100)/5;	
 	}
 
-	void getkenyamanankelas(){
+	@Override
+	void out() {
 		System.out.print("\n\nKebisingan : "+kls.getKebisingan() +"  (" + ""+e1 +")");
 		System.out.print("\nBau        : "+kls.getBau() +"  (" + ""+e2 +")");
 		System.out.print("\nKebocoran  : "+kls.getKebocoran() +"  (" + ""+e3 +")");

@@ -2,34 +2,36 @@ package TugasBesar;
 
 public class KelasLauncher {
 	public static void main(String [] tugasbesar){
-	DataKelas data = new DataKelas();
+		
+	identitasruang identitas = new identitasruang();
+	kondisiruang koruang = new kondisiruang();
 	kebersihan bersih = new kebersihan();
-	
-	data.setidentitasruang();
-	//data.setkondisiruang();
-	//data.setkondisisarana();
-	//data.setlingkungankelas();
-	bersih.setkebersihankelas();
-	//data.setkenyamanankelas();
-	//data.setkeamanankelas();
+	lingkungan lingkung = new lingkungan();
+	kenyamanan nyaman = new kenyamanan();
+	keamanan aman = new keamanan();
 	
 	///////////////////////////////////////////////////////////////
-	
-	//data.prockondisiruang();
-	//data.prockondisisarana();
-	//data.proclingkungankelas();
-	bersih.prockebersihankelas();
-	//data.prockenyamanankelas();
-	//data.prockeamanankelas();
+	identitas.in();
+	koruang.in();
+	bersih.in();
+	lingkung.in();
+	nyaman.in();
+	aman.in();
 	
 	///////////////////////////////////////////////////////////////
+	identitas.proc();
+	koruang.proc();
+	bersih.proc();
+	lingkung.proc();
+	nyaman.proc();
+	aman.proc();
 	
-	data.getidentitasruang();
-	//data.getkondisiruang();
-	//data.getkondisisarana();
-	//data.getlingkungankelas();
-    bersih.getkebersihankelas();
-	//data.getkenyamanankelas();
-    //data.getkeamanankelas();
+	///////////////////////////////////////////////////////////////
+	identitas.out();
+	koruang.out();
+	bersih.out();
+	lingkung.out();
+	nyaman.out();
+	aman.out();
 	}
 }
