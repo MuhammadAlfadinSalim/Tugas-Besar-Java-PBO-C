@@ -1,6 +1,6 @@
 package TugasBesar;
 
-public class lingkungan extends DataKelas{
+public class lingkungan extends DataKelas implements perhitungan{
 
 	@Override
 	void in() {
@@ -23,7 +23,7 @@ public class lingkungan extends DataKelas{
 
 	
 	@Override
-	void proc() {
+	public void proc() {
 		if (kls.getSirkulasi().equals("lancar"))
 		{
 			c1 = x;
