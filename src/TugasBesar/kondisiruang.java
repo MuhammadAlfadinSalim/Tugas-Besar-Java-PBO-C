@@ -1,5 +1,5 @@
 package TugasBesar;
-public class kondisiruang extends DataKelas{
+public class kondisiruang extends DataKelas implements perhitungan{
 	
 	@Override
 	void in() {
@@ -26,7 +26,7 @@ public class kondisiruang extends DataKelas{
 	}
 
 	@Override
-	void proc() {
+	public void proc() {
 		luasruang = kls.getPanjangruang() * kls.getLebarruang();
 		rasioruang = luasruang / kls.getJumlahkursi();
 		if (+kls.getPanjangruang() != +kls.getLebarruang()) //1

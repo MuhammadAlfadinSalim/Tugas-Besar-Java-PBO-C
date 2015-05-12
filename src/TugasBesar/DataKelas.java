@@ -21,6 +21,5 @@ Double n6 = 0.0, persen6;
 //method di bawah ini untuk semua subclasses . . .
 
 abstract void in();
-abstract void proc();
 abstract void out();
 }

@@ -1,6 +1,6 @@
 package TugasBesar;
 
-public class kebersihan extends DataKelas{
+public class kebersihan extends DataKelas implements perhitungan{
 
 	@Override
 	void in() {
@@ -27,7 +27,7 @@ public class kebersihan extends DataKelas{
 
 
 	@Override
-	void proc() {
+	public void proc() {
 		if (kls.getKondisilantai().equalsIgnoreCase("bersih"))
 		{
 			d1 = x;

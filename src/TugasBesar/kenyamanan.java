@@ -1,6 +1,6 @@
 package TugasBesar;
 
-public class kenyamanan extends DataKelas{
+public class kenyamanan extends DataKelas implements perhitungan{
 
 	@Override
 	void in() {
@@ -26,7 +26,7 @@ public class kenyamanan extends DataKelas{
 	}
 
 	@Override
-	void proc() {
+	public void proc() {
 		if (kls.getKebisingan().equalsIgnoreCase("tidak bising"))
 		{
 			e1 = x;

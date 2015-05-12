@@ -1,6 +1,6 @@
 package TugasBesar;
 
-public class identitasruang extends DataKelas {
+public class identitasruang extends DataKelas implements perhitungan{
 
 	@Override
 	void in() {
@@ -18,7 +18,7 @@ public class identitasruang extends DataKelas {
 	}
 
 	@Override
-	void proc() {
+	public void proc() {
 
 	}
 

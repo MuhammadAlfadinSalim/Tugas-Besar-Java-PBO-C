@@ -3,13 +3,13 @@ package TugasBesar;
 public class KelasLauncher {
 	public static void main(String [] tugasbesar){
 		
-	identitasruang identitas = new identitasruang();
+	/*identitasruang identitas = new identitasruang();
 	kondisiruang koruang = new kondisiruang();
 	kebersihan bersih = new kebersihan();
 	lingkungan lingkung = new lingkungan();
 	kenyamanan nyaman = new kenyamanan();
 	keamanan aman = new keamanan();
-	
+	kebersihan bersih = new kebersihan();
 	///////////////////////////////////////////////////////////////
 	identitas.in();
 	koruang.in();
@@ -32,6 +32,10 @@ public class KelasLauncher {
 	bersih.out();
 	lingkung.out();
 	nyaman.out();
-	aman.out();
+	aman.out();*/
+		kebersihan bersih = new kebersihan();
+		bersih.in();
+		bersih.proc();
+		bersih.out();
 	}
 }

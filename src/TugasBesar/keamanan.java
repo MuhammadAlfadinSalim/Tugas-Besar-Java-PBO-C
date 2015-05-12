@@ -1,6 +1,6 @@
 package TugasBesar;
 
-public class keamanan extends DataKelas{
+public class keamanan extends DataKelas implements perhitungan{
 
 	@Override
 	void in() {
@@ -22,7 +22,7 @@ public class keamanan extends DataKelas{
 	}
 
 	@Override
-	void proc() {
+	public void proc() {
 		if (kls.getKekokohan().equalsIgnoreCase("kokoh")){
 			f1 =x;
 			n6 = n6 + 1;
