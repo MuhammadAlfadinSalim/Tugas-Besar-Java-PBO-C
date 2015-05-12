@@ -15,7 +15,8 @@ kondisiac, posisiac,
 kondisicctv, posisicctv,
 ssid;
 private Double bandwidth;
-private int jumlahsteker, jumlahkabellcd, jumlahlampu, jumlahkipasangin, jumlahac, jumlahcctv;
+private Double jumlahsteker;
+private Double jumlahkabellcd, jumlahlampu, jumlahkipasangin, jumlahac, jumlahcctv;
 // variable untuk kondisi sarana ruang
 
 
@@ -91,10 +92,10 @@ public void setJumlahjendela(int jumlahjendela) {
 
 
 //Setter n Getter untuk jumlah,kondisi, dan posisi sarana
-public int getJumlahsteker() {
+public Double getJumlahsteker() {
     return jumlahsteker;
 }
-public void setJumlahsteker(int jumlahsteker) {
+public void setJumlahsteker(Double jumlahsteker) {
     this.jumlahsteker = jumlahsteker;
 }
 public String getKondisisteker() {
@@ -109,10 +110,10 @@ public String getPosisisteker() {
 public void setPosisisteker(String posisisteker) {
     this.posisisteker = posisisteker;
 }
-public int getJumlahkabellcd() {
+public Double getJumlahkabellcd() {
     return jumlahkabellcd;
 }
-public void setJumlahkabellcd(int jumlahkabellcd) {
+public void setJumlahkabellcd(Double jumlahkabellcd) {
     this.jumlahkabellcd = jumlahkabellcd;
 }
 public String getKondisikabellcd() {
@@ -127,10 +128,10 @@ public String getPosisikabellcd() {
 public void setPosisikabellcd(String posisikabellcd) {
     this.posisikabellcd = posisikabellcd;
 }
-public int getJumlahlampu() {
+public Double getJumlahlampu() {
     return jumlahlampu;
 }
-public void setJumlahlampu(int jumlahlampu) {
+public void setJumlahlampu(Double jumlahlampu) {
     this.jumlahlampu = jumlahlampu;
 }
 public String getKondisilampu() {
@@ -145,10 +146,10 @@ public String getPosisilampu() {
 public void setPosisilampu(String posisilampu) {
     this.posisilampu = posisilampu;
 }
-public int getJumlahkipasangin() {
+public Double getJumlahkipasangin() {
     return jumlahkipasangin;
 }
-public void setJumlahkipasangin(int jumlahkipasangin) {
+public void setJumlahkipasangin(Double jumlahkipasangin) {
     this.jumlahkipasangin = jumlahkipasangin;
 }
 public String getKondisikipasangin() {
@@ -163,10 +164,10 @@ public String getPosisikipasangin() {
 public void setPosisikipasangin(String posisikipasangin) {
     this.posisikipasangin = posisikipasangin;
 }
-public int getJumlahac() {
+public Double getJumlahac() {
     return jumlahac;
 }
-public void setJumlahac(int jumlahac) {
+public void setJumlahac(Double jumlahac) {
     this.jumlahac = jumlahac;
 }
 public String getKondisiac() {
@@ -193,10 +194,10 @@ public Double getBandwidth() {
 public void setBandwidth(Double bandwidth) {
     this.bandwidth = bandwidth;
 }
-public int getJumlahcctv() {
+public Double getJumlahcctv() {
     return jumlahcctv;
 }
-public void setJumlahcctv(int jumlahcctv) {
+public void setJumlahcctv(Double jumlahcctv) {
     this.jumlahcctv = jumlahcctv;
 }
 public String getKondisicctv() {
@@ -340,6 +341,10 @@ public String getBahaya() {
 public void setBahaya(String bahaya) {
 	this.bahaya = bahaya;
 }	
+
+    void setJumlahsteker(int jumlahsteker) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 	
 }
