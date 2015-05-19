@@ -19,12 +19,12 @@ public class LCD extends Sarana {
 	kls.setJumlahkabellcd(jumlahlcd);
 	
 	System.out.print("kondisi lcd : ");
-	String Kondisilcd = scan.next();
-	kls.setKondisisteker(Kondisilcd);
+	String Kondisikabellcd = scan.next();
+	kls.setKondisikabellcd(Kondisikabellcd);
 	
 	System.out.print("posisi lcd : ");
-	String Posisilcd = scan.next();
-	kls.setPosisisteker(Posisilcd);
+	String Posisikabellcd = scan.next();
+	kls.setPosisikabellcd(Posisikabellcd);
         
     }
 
@@ -35,7 +35,7 @@ public class LCD extends Sarana {
 			
 			b1 = x;
 			n2 = n2 + 1;
-			if (kls.getKondisikabellcd().equalsIgnoreCase("berfungsi")) //2
+			if (kls.getKondisikabellcd().equals("berfungsi")) //2
 			{
 				b2 = x;
 				n2 = n2 + 1;	
@@ -118,9 +118,9 @@ public class LCD extends Sarana {
         
         System.out.print("\nJumlah Jumlah Kabel LCD : "+kls.getJumlahkabellcd() +"  (" + ""+b1 +")");
         
-        System.out.print("\nKondisi Kabel LCD : "+kls.getKondisikabellcd() +"  (" + ""+b3 +")");
+        System.out.print("\nKondisi Kabel LCD : "+kls.getKondisikabellcd() +"  (" + ""+b2 +")");
         
-        System.out.print("\nPosisi Kabel LCD : "+kls.getPosisikabellcd() +"  (" + ""+b2 +")");
+        System.out.print("\nPosisi Kabel LCD : "+kls.getPosisikabellcd() +"  (" + ""+b3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n2);
 	System.out.print("\nKesesuaian = "+persen2 + "%");
