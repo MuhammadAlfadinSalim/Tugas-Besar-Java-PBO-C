@@ -30,7 +30,7 @@ public class Lampu extends Sarana {
 
     void proc() {
         
-		if (kls.getJumlahlampu() >= 18) //1
+		if (+kls.getJumlahlampu() >= 18) //1
 		{
 			
 			c1 = x;
@@ -39,7 +39,7 @@ public class Lampu extends Sarana {
 			{
 				c2 = x;
 				n3 = n3 + 1;	
-				if (kls.getPosisilampu().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisilampu().equalsIgnoreCase("atap")) //3
 				{
 					c3 = x;
 					n3 = n3 + 1;
@@ -55,7 +55,7 @@ public class Lampu extends Sarana {
 			{
 				c2 = y;
 				n3 = n3 + 0;
-				if (kls.getPosisilampu().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisilampu().equalsIgnoreCase("atap")) //3
 				{
 					c3 = x;
 					n3 = n3 + 1;
@@ -78,7 +78,7 @@ public class Lampu extends Sarana {
 			{
 				c2 = x;
 				n3 = n3 + 1;	
-				if (kls.getPosisilampu().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisilampu().equalsIgnoreCase("atap")) //3
 				{
 					c3 = x;
 					n3 = n3 + 1;
@@ -95,7 +95,7 @@ public class Lampu extends Sarana {
 			{
 				c2 = y;
 				n3 = n3 + 0;
-				if (kls.getPosisilampu().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisilampu().equalsIgnoreCase("atap")) //3
 				{
 					c3 = x;
 					n3 = n3 + 1;
@@ -118,9 +118,9 @@ public class Lampu extends Sarana {
         
         System.out.print("\nJumlah Jumlah lampu : "+kls.getJumlahlampu() +"  (" + ""+c1 +")");
         
-        System.out.print("\nKondisi lampu : "+kls.getKondisilampu() +"  (" + ""+c3 +")");
+        System.out.print("\nKondisi lampu : "+kls.getKondisilampu() +"  (" + ""+c2 +")");
         
-        System.out.print("\nPosisi lampu : "+kls.getPosisilampu() +"  (" + ""+c2 +")");
+        System.out.print("\nPosisi lampu : "+kls.getPosisilampu() +"  (" + ""+c3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n3);
 	System.out.print("\nKesesuaian = "+persen3 + "%");
