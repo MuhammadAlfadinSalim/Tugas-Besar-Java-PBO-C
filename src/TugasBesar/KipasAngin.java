@@ -39,7 +39,7 @@ public class KipasAngin extends Sarana {
 			{
 				d2 = x;
 				n4 = n4 + 1;	
-				if (kls.getPosisikipasangin().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisikipasangin().equalsIgnoreCase("atap")) //3
 				{
 					d3 = x;
 					n4 = n4 + 1;
@@ -55,7 +55,7 @@ public class KipasAngin extends Sarana {
 			{
 				d2 = y;
 				n4 = n4 + 0;
-				if (kls.getPosisikipasangin().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisikipasangin().equalsIgnoreCase("atap")) //3
 				{
 					d3 = x;
 					n4 = n4 + 1;
@@ -78,7 +78,7 @@ public class KipasAngin extends Sarana {
 			{
 				d2 = x;
 				n4 = n4 + 1;	
-				if (kls.getPosisikipasangin().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisikipasangin().equalsIgnoreCase("atap")) //3
 				{
 					d3 = x;
 					n4 = n4 + 1;
@@ -95,7 +95,7 @@ public class KipasAngin extends Sarana {
 			{
 				d2 = y;
 				n4 = n4 + 0;
-				if (kls.getPosisikipasangin().equalsIgnoreCase("atap ruangan")) //3
+				if (kls.getPosisikipasangin().equalsIgnoreCase("atap")) //3
 				{
 					d3 = x;
 					n4 = n4 + 1;
@@ -118,9 +118,9 @@ public class KipasAngin extends Sarana {
         
         System.out.print("\nJumlah Jumlah Kipas Angin : "+kls.getJumlahkipasangin() +"  (" + ""+d1 +")");
         
-        System.out.print("\nKondisi kipas Angin : "+kls.getKondisikipasangin() +"  (" + ""+d3 +")");
+        System.out.print("\nKondisi kipas Angin : "+kls.getKondisikipasangin() +"  (" + ""+d2 +")");
         
-        System.out.print("\nPosisi Kipas Angin : "+kls.getPosisikipasangin() +"  (" + ""+d2 +")");
+        System.out.print("\nPosisi Kipas Angin : "+kls.getPosisikipasangin() +"  (" + ""+d3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n4);
 	System.out.print("\nKesesuaian = "+persen4 + "%");
