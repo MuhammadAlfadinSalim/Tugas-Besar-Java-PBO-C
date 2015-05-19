@@ -33,9 +33,39 @@ public class KelasLauncher {
 	lingkung.out();
 	nyaman.out();
 	aman.out();*/
-		kebersihan bersih = new kebersihan();
-		bersih.in();
-		bersih.proc();
-		bersih.out();
+            /*
+	kebersihan bersih = new kebersihan();
+	bersih.in();
+	bersih.proc();
+	bersih.out();
+        */
+            
+            System.out.println("\n");
+            stopkontak steker = new stopkontak();
+            steker.in();
+            steker.proc();
+            steker.out();
+            
+            
+            System.out.println("\n");
+            LCD liquid = new LCD();
+            liquid.in();
+            liquid.proc();
+            liquid.out();
+            
+            
+            System.out.println("\n");
+            Lampu lmp = new Lampu();
+            lmp.in();
+            lmp.proc();
+            lmp.out();
+            
+            System.out.println("\n");
+            KipasAngin kps = new KipasAngin();
+            kps.in();
+            kps.proc();
+            kps.out();
+            
+            
 	}
 }
