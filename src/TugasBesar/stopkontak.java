@@ -118,9 +118,9 @@ public class stopkontak extends Sarana {
         
         System.out.print("\nJumlah Steker : "+kls.getJumlahsteker() +"  (" + ""+a1 +")");
         
-        System.out.print("\nKondisi STeker : "+kls.getKondisisteker() +"  (" + ""+a3 +")");
+        System.out.print("\nKondisi STeker : "+kls.getKondisisteker() +"  (" + ""+a2 +")");
         
-        System.out.print("\nPosisi Steker : "+kls.getPosisisteker() +"  (" + ""+a2 +")");
+        System.out.print("\nPosisi Steker : "+kls.getPosisisteker() +"  (" + ""+a3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n1);
 	System.out.print("\nKesesuaian = "+persen1 + "%");
