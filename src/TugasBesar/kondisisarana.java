@@ -174,5 +174,23 @@ public class kondisisarana extends DataKelas{
 		System.out.print("\nKondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+b7 +")");
                 System.out.print("\nPosisi CCTV : "+kls.getPosisicctv() +"  (" + ""+b7 +")");
 	}
+
+	@Override
+	void in() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	void proc() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	void out() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
