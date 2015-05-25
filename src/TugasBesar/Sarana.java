@@ -4,12 +4,8 @@
  * and open the template in the editor.
  */
 package TugasBesar;
-
-/**
- *
- * @author OWNER
- */
-public abstract class Sarana extends DataKelas {
+import java.io.*;
+public abstract class Sarana extends DataKelas implements Serializable {
     
 String x = "Sesuai", y = "Tidak Sesuai"; 
 String a1,a2,a3;
@@ -27,5 +23,5 @@ Double n4 = 0.0, persen4;
 Double n5 = 0.0, persen5;
 Double n6 = 0.0, persen6;
 Double n7 = 0.0, persen7;
-    
+ 
 }

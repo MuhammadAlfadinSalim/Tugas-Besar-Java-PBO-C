@@ -1,0 +1,5 @@
+Kondisi CCTV : baik  (Sesuai)
+Jumlah CCTV : 2  (Sesuai)
+Posisi CCTV : depan atau belakang  (Sesuai)
+Jumlah Sesuai = 3.0
+Kesesuaian = 100.0%

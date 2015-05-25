@@ -1,9 +1,21 @@
 package TugasBesar;
+import java.io.*;
+public class CCTV extends Sarana implements perhitungan, Serializable {
 
-public class CCTV extends Sarana implements perhitungan {
-	void in (){
+	//public CCTV(String string) {
+	//}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	String result, result2, result3, result4, result5;
+	
+	@Override
+	void in() {
 		System.out.print("Jumlah cctv : ");
-		Double jumlahcctv = scan.nextDouble();
+		String jumlahcctv = scan.nextLine();
 		kls.setJumlahcctv(jumlahcctv);
 		
 		System.out.print("kondisi cctv : ");
@@ -14,83 +26,111 @@ public class CCTV extends Sarana implements perhitungan {
 		String Posisicctv = scan.nextLine();
 		kls.setPosisicctv(Posisicctv);
 	}
-	public void proc(){
+
+	@Override
+	public void proc() {
 		if (kls.getKondisicctv().equalsIgnoreCase("Baik"))
 		{
 			g1 = x;
 			n7 = n7 + 1;
-		if (kls.getJumlahcctv().equals("2"))
-		{
-			g2 = x;
-			n7 = n7 + 1;
-			if (kls.getPosisicctv().equalsIgnoreCase("Depan atau Belakang"))
-		{
-			g3 = x;
-			n7 = n7 + 1;	
-		}
+			if (kls.getJumlahcctv().equals("2"))
+			{
+				g2 = x;
+				n7 = n7 + 1;
+				if (kls.getPosisicctv().equalsIgnoreCase("Depan atau Belakang"))
+				{
+					g3 = x;
+					n7 = n7 + 1;	
+				}
+				else
+				{
+					g3 = y;
+					n7 = n7 + 0;
+				}
+			}
 			else
-		{
-			g3 = y;
-			n7 = n7 + 0;
+			{
+				g2 = y;
+				n7 = n7 + 0;
+				if (kls.getPosisicctv().equalsIgnoreCase("Depan atau Belakang"))
+				{
+					g3 = x;
+					n7 = n7 + 1;		 
+				}
+				else
+				{
+					g3 = y;
+					n7 = n7 + 0;		
+				}
+			}
 		}
-	}
-			else
-		{
-			g2 = y;
-			n7 = n7 + 0;
-			if (kls.getKebocoran().equalsIgnoreCase("tidak bocor"))
-		{
-			g3 = x;
-			n7 = n7 + 1;		 
-		}
-			else
-		{
-			g3 = y;
-			n7 = n7 + 0;		
-		}
-	}
-}
-	
 		else
 		{
 			g1 = y;
 			n7 = n7 + 0;
-			if (kls.getBau().equalsIgnoreCase("tidak bau"))
-		{
-			g2 = x;
-			n7 = n7 + 1;
-			if (kls.getKebocoran().equalsIgnoreCase("tidak bocor"))
-		{
-			g3 = x;
-			n7 = n7 + 1;
-		}
-			else	
-		{
-			g3 = y;
-			n7 = n7 + 0;
-		}
-	}			
+			if (kls.getJumlahcctv().equals("2"))
+			{
+				g2 = x;
+				n7 = n7 + 1;
+				if (kls.getPosisicctv().equalsIgnoreCase("Depan atau Belakang"))
+				{
+					g3 = x;
+					n7 = n7 + 1;
+				}
+				else	
+				{
+					g3 = y;
+					n7 = n7 + 0;
+				}
+			}			
 			else
-		{
-			g2 = y;
-			n7 = n7 + 0;
-			if (kls.getKebocoran().equalsIgnoreCase("tidak bocor"))
-		{
-			g3 = x;
-			n7 = n7 + 1;
+			{
+				g2 = y;
+				n7 = n7 + 0;
+				if (kls.getPosisicctv().equalsIgnoreCase("Depan atau Belakang"))
+				{
+					g3 = x;
+					n7 = n7 + 1;
+				}
+				else
+				{
+					g3 = y;
+					n7 = n7 + 0;
+				}
+			}
 		}
-			else
-		{
-			g3 = y;
-			n7 = n7 + 0;
-		}
+		persen7 = (n7*100)/3;
 	}
-		persen5 = (n7*100)/5;
+
+	@Override
+	void out() {
+		result = "Kondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+g1 +")";
+		result2	= "Jumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+g2 +")";
+		result3 = "Posisi CCTV : "+kls.getPosisicctv() +"  (" + ""+g3 +")";
+		result4 = "Jumlah Sesuai = "+n7;
+		result5 = "Kesesuaian = "+persen7 + "%";
+		
+		System.out.print("\nKondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+g1 +")");
+		System.out.print("\nJumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+g2 +")");
+		System.out.print("\nPosisi CCTV : "+kls.getPosisicctv() +"  (" + ""+g3 +")");
+		System.out.print("\nJumlah Sesuai = "+n7);
+		System.out.print("\nKesesuaian = "+persen7 + "%");
 	}
-}
-	void out(){
-		System.out.print("\nPosisi CCTV : "+kls.getPosisicctv());
-		System.out.print("\nJumlah CCTV : "+kls.getJumlahcctv());
-		System.out.print("\nKondisi CCTV : "+kls.getKondisicctv());
-	}
+	
+	/*String out2() {
+		/*result = "\nKondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+g1 +")"
+				+ "\nJumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+g2 +")" 
+				+ "\nPosisi CCTV : "+kls.getPosisicctv() +"  (" + ""+g3 +")" 
+				+ "\nJumlah Sesuai = "+n7
+				+ "\nKesesuaian = "+persen7 + "%";
+		
+		System.out.print("\nKondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+g1 +")");
+		System.out.print("\nJumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+g2 +")");
+		System.out.print("\nPosisi CCTV : "+kls.getPosisicctv() +"  (" + ""+g3 +")");
+		System.out.print("\nJumlah Sesuai = "+n7);
+		System.out.print("\nKesesuaian = "+persen7 + "%");
+		
+		return null;
+	}*/
+
 }

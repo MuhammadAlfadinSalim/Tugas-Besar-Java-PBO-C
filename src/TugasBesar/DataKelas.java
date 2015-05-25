@@ -1,6 +1,7 @@
 package TugasBesar;
 import java.util.Scanner;
-public abstract class DataKelas {
+import java.io.*;
+public abstract class DataKelas implements Serializable{
 Kelas kls = new Kelas();
 Scanner scan = new Scanner(System.in);
 Double luasruang, rasioruang;

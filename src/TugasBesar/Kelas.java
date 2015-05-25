@@ -1,6 +1,7 @@
 package TugasBesar;
+import java.io.*;
 
-public class Kelas {
+public class Kelas implements Serializable{
 	
 private String prodi, namaruang, bentukruang, lokasiruang; // variable untuk identitas ruang
 
@@ -16,7 +17,7 @@ kondisicctv, posisicctv,
 ssid;
 private Double bandwidth;
 private Double jumlahsteker;
-private Double jumlahkabellcd, jumlahlampu, jumlahkipasangin, jumlahac, jumlahcctv;
+private String jumlahkabellcd, jumlahlampu, jumlahkipasangin, jumlahac, jumlahcctv;
 // variable untuk kondisi sarana ruang
 
 
@@ -110,10 +111,10 @@ public String getPosisisteker() {
 public void setPosisisteker(String posisisteker) {
     this.posisisteker = posisisteker;
 }
-public Double getJumlahkabellcd() {
+public String getJumlahkabellcd() {
     return jumlahkabellcd;
 }
-public void setJumlahkabellcd(Double jumlahkabellcd) {
+public void setJumlahkabellcd(String jumlahkabellcd) {
     this.jumlahkabellcd = jumlahkabellcd;
 }
 public String getKondisikabellcd() {
@@ -128,10 +129,10 @@ public String getPosisikabellcd() {
 public void setPosisikabellcd(String posisikabellcd) {
     this.posisikabellcd = posisikabellcd;
 }
-public Double getJumlahlampu() {
+public String getJumlahlampu() {
     return jumlahlampu;
 }
-public void setJumlahlampu(Double jumlahlampu) {
+public void setJumlahlampu(String jumlahlampu) {
     this.jumlahlampu = jumlahlampu;
 }
 public String getKondisilampu() {
@@ -146,10 +147,10 @@ public String getPosisilampu() {
 public void setPosisilampu(String posisilampu) {
     this.posisilampu = posisilampu;
 }
-public Double getJumlahkipasangin() {
+public String getJumlahkipasangin() {
     return jumlahkipasangin;
 }
-public void setJumlahkipasangin(Double jumlahkipasangin) {
+public void setJumlahkipasangin(String jumlahkipasangin) {
     this.jumlahkipasangin = jumlahkipasangin;
 }
 public String getKondisikipasangin() {
@@ -164,10 +165,10 @@ public String getPosisikipasangin() {
 public void setPosisikipasangin(String posisikipasangin) {
     this.posisikipasangin = posisikipasangin;
 }
-public Double getJumlahac() {
+public String getJumlahac() {
     return jumlahac;
 }
-public void setJumlahac(Double jumlahac) {
+public void setJumlahac(String jumlahac) {
     this.jumlahac = jumlahac;
 }
 public String getKondisiac() {
@@ -194,10 +195,10 @@ public Double getBandwidth() {
 public void setBandwidth(Double bandwidth) {
     this.bandwidth = bandwidth;
 }
-public Double getJumlahcctv() {
+public String getJumlahcctv() {
     return jumlahcctv;
 }
-public void setJumlahcctv(Double jumlahcctv) {
+public void setJumlahcctv(String jumlahcctv) {
     this.jumlahcctv = jumlahcctv;
 }
 public String getKondisicctv() {
