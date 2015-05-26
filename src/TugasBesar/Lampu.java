@@ -15,7 +15,7 @@ public class Lampu extends Sarana {
         void in() {
         
         System.out.print("Jumlah Lampu : ");
-	Double jumlahlampu = scan.nextDouble();
+	String jumlahlampu = scan.next();
 	kls.setJumlahlampu(jumlahlampu);
 	
 	System.out.print("kondisi lampu : ");
@@ -30,7 +30,7 @@ public class Lampu extends Sarana {
 
     void proc() {
         
-		if (kls.getJumlahlampu() >= 18) //1
+		if (kls.getJumlahlampu().equalsIgnoreCase("18")) //1
 		{
 			
 			c1 = x;
