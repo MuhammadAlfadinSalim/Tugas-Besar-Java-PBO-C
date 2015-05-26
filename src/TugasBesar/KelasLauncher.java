@@ -35,14 +35,14 @@ public class KelasLauncher extends Kelas{
 	nyaman.out();
 	aman.out();*/
 
-		//kenyamanan nyaman = new kenyamanan();
+		
 		CCTV cctv = new CCTV();
 		Kelas kls = new Kelas();
-		//nyaman.in();
+		
 		cctv.in();
-		//nyaman.proc();
+		
 		cctv.proc();
-		//nyaman.out();
+		
 		cctv.out();
 		try 
 		{
