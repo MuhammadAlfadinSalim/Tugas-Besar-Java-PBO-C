@@ -15,7 +15,7 @@ public class KipasAngin extends Sarana {
         void in() {
         
     System.out.print("Jumlah Kipas Angin : ");
-	Double jumlahkipasangin = scan.nextDouble();
+	String jumlahkipasangin = scan.nextLine();
 	kls.setJumlahkipasangin(jumlahkipasangin);
 	
 	System.out.print("kondisi kipas Angin : ");
@@ -30,7 +30,7 @@ public class KipasAngin extends Sarana {
 
     void proc() {
         
-		if (kls.getJumlahkipasangin() >= 2) //1
+		if (kls.getJumlahkipasangin().equalsIgnoreCase("2")) //1
 		{
 			
 			d1 = x;
