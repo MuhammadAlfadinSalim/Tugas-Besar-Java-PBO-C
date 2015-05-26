@@ -15,7 +15,7 @@ public class LCD extends Sarana {
         void in() {
         
         System.out.print("Jumlah lcd : ");
-	Double jumlahlcd = scan.nextDouble();
+	String jumlahlcd = scan.nextLine();
 	kls.setJumlahkabellcd(jumlahlcd);
 	
 	System.out.print("kondisi lcd : ");
@@ -30,7 +30,7 @@ public class LCD extends Sarana {
 
     void proc() {
         
-		if (kls.getJumlahkabellcd()>=1) //1
+		if (kls.getJumlahkabellcd().equalsIgnoreCase("1")) //1
 		{
 			
 			b1 = x;
