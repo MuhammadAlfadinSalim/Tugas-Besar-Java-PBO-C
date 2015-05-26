@@ -44,8 +44,8 @@ public class KelasLauncher extends Kelas{
 		cctv.proc();
 		//nyaman.out();
 		cctv.out();
-		try {
-			
+		try 
+		{
 			FileWriter tulis = new FileWriter("save.txt");
 			BufferedWriter tulis2 = new BufferedWriter(tulis);
 			tulis2.write(""+cctv.result);
@@ -59,41 +59,32 @@ public class KelasLauncher extends Kelas{
 			tulis2.write(""+cctv.result5);
 			tulis2.newLine();
 			tulis2.close();
-		//ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("save.sf"));
-		//oos.writeObject(cctv);
-		//oos.writeObject(two);
-		//oos.writeObject(three);
-		//oos.close();
-		} catch(IOException ex) {
+		} 
+		
+		catch(IOException ex) 
+		{
 		ex.printStackTrace();
 		}
-		//cctv = null;
-		//two = null;
-		//three = null;
-		
 		
 		System.out.println("\n\nDeserialized Object....\n");
-		try {
-			
+		
+		try 
+		{
 			File baca = new File("save.txt");
 			FileReader read = new FileReader(baca);
 			BufferedReader reader = new BufferedReader(read);
-			//reader.read();
-			//reader.readLine();
 			
-			
-			
-			//ObjectInputStream ois = new ObjectInputStream(new FileInputStream("save.sf"));
-			//CCTV cctvrestore = (CCTV) ois.readObject();
-		
 			String tampung = null;
-			while((tampung = reader.readLine()) != null){
+			while((tampung = reader.readLine()) != null)
+			{
 				System.out.println(tampung);
 			}
-		//System.out.println("One’s type: ");
-		reader.close();
 		
-		} catch(Exception ex) {
+		reader.close();
+		}
+		
+		catch(Exception ex) 
+		{
 		ex.printStackTrace();
 		}
 //=======
