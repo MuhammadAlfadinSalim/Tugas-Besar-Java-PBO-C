@@ -9,12 +9,12 @@ package TugasBesar;
  *
  * @author OWNER
  */
-public class LCD extends Sarana {
+public class LCD extends Sarana implements perhitungan{
     
-        @Override
-        void in() {
+    @Override
+    void in() {
         
-        System.out.print("Jumlah lcd : ");
+    System.out.print("Jumlah lcd : ");
 	String jumlahlcd = scan.nextLine();
 	kls.setJumlahkabellcd(jumlahlcd);
 	
@@ -28,7 +28,8 @@ public class LCD extends Sarana {
         
     }
 
-    void proc() {
+    @Override
+    public void proc() {
         
 		if (kls.getJumlahkabellcd().equalsIgnoreCase("1")) //1
 		{
@@ -118,9 +119,9 @@ public class LCD extends Sarana {
         
         System.out.print("\nJumlah Jumlah Kabel LCD : "+kls.getJumlahkabellcd() +"  (" + ""+b1 +")");
         
-        System.out.print("\nKondisi Kabel LCD : "+kls.getKondisikabellcd() +"  (" + ""+b3 +")");
+        System.out.print("\nKondisi Kabel LCD : "+kls.getKondisikabellcd() +"  (" + ""+b2 +")");
         
-        System.out.print("\nPosisi Kabel LCD : "+kls.getPosisikabellcd() +"  (" + ""+b2 +")");
+        System.out.print("\nPosisi Kabel LCD : "+kls.getPosisikabellcd() +"  (" + ""+b3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n2);
 	System.out.print("\nKesesuaian = "+persen2 + "%");

@@ -9,12 +9,12 @@ package TugasBesar;
  *
  * @author OWNER
  */
-public class stopkontak extends Sarana {
+public class stopkontak extends Sarana implements perhitungan{
 
     @Override
     void in() {
         
-        System.out.print("\nJumlah Stop Kontak/Steker : ");
+    System.out.print("\nJumlah Stop Kontak/Steker : ");
 	Double jumlahsteker = scan.nextDouble();
 	kls.setJumlahsteker(jumlahsteker);
 	
@@ -28,7 +28,8 @@ public class stopkontak extends Sarana {
         
     }
 
-    void proc() {
+    @Override
+    public void proc() {
         
 		if (kls.getJumlahsteker() >= 4) //1
 		{
@@ -118,9 +119,9 @@ public class stopkontak extends Sarana {
         
         System.out.print("\nJumlah Steker : "+kls.getJumlahsteker() +"  (" + ""+a1 +")");
         
-        System.out.print("\nKondisi STeker : "+kls.getKondisisteker() +"  (" + ""+a3 +")");
+        System.out.print("\nKondisi STeker : "+kls.getKondisisteker() +"  (" + ""+a2 +")");
         
-        System.out.print("\nPosisi Steker : "+kls.getPosisisteker() +"  (" + ""+a2 +")");
+        System.out.print("\nPosisi Steker : "+kls.getPosisisteker() +"  (" + ""+a3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n1);
 	System.out.print("\nKesesuaian = "+persen1 + "%");

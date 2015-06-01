@@ -9,12 +9,12 @@ package TugasBesar;
  *
  * @author OWNER
  */
-public class Lampu extends Sarana {
+public class Lampu extends Sarana implements perhitungan{
     
-        @Override
-        void in() {
+    @Override
+    void in() {
         
-        System.out.print("Jumlah Lampu : ");
+    System.out.print("Jumlah Lampu : ");
 	String jumlahlampu = scan.next();
 	kls.setJumlahlampu(jumlahlampu);
 	
@@ -28,7 +28,7 @@ public class Lampu extends Sarana {
         
     }
 
-    void proc() {
+    public void proc() {
         
 		if (kls.getJumlahlampu().equalsIgnoreCase("18")) //1
 		{
@@ -118,9 +118,9 @@ public class Lampu extends Sarana {
         
         System.out.print("\nJumlah Jumlah lampu : "+kls.getJumlahlampu() +"  (" + ""+c1 +")");
         
-        System.out.print("\nKondisi lampu : "+kls.getKondisilampu() +"  (" + ""+c3 +")");
+        System.out.print("\nKondisi lampu : "+kls.getKondisilampu() +"  (" + ""+c2 +")");
         
-        System.out.print("\nPosisi lampu : "+kls.getPosisilampu() +"  (" + ""+c2 +")");
+        System.out.print("\nPosisi lampu : "+kls.getPosisilampu() +"  (" + ""+c3 +")");
         
         System.out.print("\nJumlah Sesuai = "+n3);
 	System.out.print("\nKesesuaian = "+persen3 + "%");

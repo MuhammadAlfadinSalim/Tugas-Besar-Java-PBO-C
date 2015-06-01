@@ -9,7 +9,7 @@ package TugasBesar;
  *
  * @author OWNER
  */
-public class KipasAngin extends Sarana {
+public class KipasAngin extends Sarana implements perhitungan{
     
         @Override
         void in() {
@@ -28,7 +28,7 @@ public class KipasAngin extends Sarana {
         
     }
 
-    void proc() {
+    public void proc() {
         
 		if (kls.getJumlahkipasangin().equalsIgnoreCase("2")) //1
 		{

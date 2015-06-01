@@ -1,6 +1,8 @@
 package TugasBesar;
 
 public class AC extends Sarana implements perhitungan{
+	
+	@Override
 	void in (){
 		System.out.print("Jumlah AC : ");
 		String jumlahac = scan.nextLine();
@@ -14,6 +16,8 @@ public class AC extends Sarana implements perhitungan{
 		String Posisiac = scan.nextLine();
 		kls.setPosisiac(Posisiac);
 	}
+	
+	@Override
 	public void proc(){
 		if (kls.getJumlahac().equals("2"))
 		{
@@ -91,6 +95,8 @@ public class AC extends Sarana implements perhitungan{
 		}
 		persen5 = (n5*100)/3;
 	}
+	
+	@Override
 	void out(){
 		System.out.print("\nPosisi AC : "+kls.getPosisiac() +"  (" + ""+e1 +")");
 		System.out.print("\nJumlah AC : "+kls.getJumlahac() +"  (" + ""+e2 +")");

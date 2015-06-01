@@ -195,7 +195,6 @@ public class kondisiruang extends DataKelas implements perhitungan{
 			System.out.print("\nJumlah Jendela : "+kls.getJumlahjendela() +"  (" + ""+a4 +")");
 			System.out.print("\nLuas Ruang : "+luasruang);
 			System.out.print("\nRasio Ruang : "+rasioruang +"  (" + ""+a2 +")");
-			//System.out.print(prockondisiruang());
 			System.out.print("\nJumlah Sesuai = "+n1);
 			System.out.print("\nKesesuaian = "+persen1 + "%");
 	}

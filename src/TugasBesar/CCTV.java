@@ -116,21 +116,5 @@ public class CCTV extends Sarana implements perhitungan, Serializable {
 		System.out.print("\nJumlah Sesuai = "+n7);
 		System.out.print("\nKesesuaian = "+persen7 + "%");
 	}
-	
-	/*String out2() {
-		/*result = "\nKondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+g1 +")"
-				+ "\nJumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+g2 +")" 
-				+ "\nPosisi CCTV : "+kls.getPosisicctv() +"  (" + ""+g3 +")" 
-				+ "\nJumlah Sesuai = "+n7
-				+ "\nKesesuaian = "+persen7 + "%";
-		
-		System.out.print("\nKondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+g1 +")");
-		System.out.print("\nJumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+g2 +")");
-		System.out.print("\nPosisi CCTV : "+kls.getPosisicctv() +"  (" + ""+g3 +")");
-		System.out.print("\nJumlah Sesuai = "+n7);
-		System.out.print("\nKesesuaian = "+persen7 + "%");
-		
-		return null;
-	}*/
 
 }
