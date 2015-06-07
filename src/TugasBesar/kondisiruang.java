@@ -1,6 +1,9 @@
 package TugasBesar;
 public class kondisiruang extends DataKelas implements perhitungan{
 	
+	String result, result2, result3, result4, result5; 
+	//frame fr = new frame();
+	
 	@Override
 	void in() {
 		System.out.print("\nPanjang Ruang : ");
@@ -187,6 +190,13 @@ public class kondisiruang extends DataKelas implements perhitungan{
 
 	@Override
 	void out() {
+			/*result = "Kondisi CCTV : "+kls.getKondisicctv() +"  (" + ""+a1 +")";
+			result2	= "Jumlah CCTV : "+kls.getJumlahcctv() +"  (" + ""+a2 +")";
+			result3 = "Posisi CCTV : "+kls.getPosisicctv() +"  (" + ""+a3 +")";
+			result3 = "Posisi CCTV : "+kls.getPosisicctv() +"  (" + ""+a4 +")";
+			result4 = "Jumlah Sesuai = "+n7;
+			result5 = "Kesesuaian = "+persen7 + "%";*/
+
 			System.out.print("\n\nPanjang Ruang : "+kls.getPanjangruang());
 			System.out.print("\nLebar Ruang : "+kls.getLebarruang());
 			System.out.print("\nBentuk Ruang : "+bentuk +"  (" + ""+a1 +")");

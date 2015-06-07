@@ -36,27 +36,27 @@ public class KelasLauncher extends Kelas{
 	aman.out();*/
 
 		
-		CCTV cctv = new CCTV();
+		//CCTV cctv = new CCTV();
 		Kelas kls = new Kelas();
 		
-		cctv.in();
+		//cctv.in();
 		
-		cctv.proc();
+		//cctv.proc();
 		
-		cctv.out();
+		//cctv.out();
 		try 
 		{
 			FileWriter tulis = new FileWriter("save.txt");
 			BufferedWriter tulis2 = new BufferedWriter(tulis);
-			tulis2.write(""+cctv.result);
+			//tulis2.write(""+cctv.result);
 			tulis2.newLine();
-			tulis2.write(""+cctv.result2);
+			//tulis2.write(""+cctv.result2);
 			tulis2.newLine();
-			tulis2.write(""+cctv.result3);
+			//tulis2.write(""+cctv.result3);
 			tulis2.newLine();
-			tulis2.write(""+cctv.result4);
+			//tulis2.write(""+cctv.result4);
 			tulis2.newLine();
-			tulis2.write(""+cctv.result5);
+			//tulis2.write(""+cctv.result5);
 			tulis2.newLine();
 			tulis2.close();
 		} 

@@ -1,10 +1,11 @@
 package TugasBesar;
-import java.io.*;
-public class CCTV extends Sarana implements perhitungan, Serializable {
+//import java.io.*;
+public class CCTV extends Sarana implements perhitungan {
 
 	//public CCTV(String string) {
 	//}
-
+	frame fr = new frame();
+	
 	/**
 	 * 
 	 */
@@ -12,8 +13,16 @@ public class CCTV extends Sarana implements perhitungan, Serializable {
 
 	String result, result2, result3, result4, result5;
 	
+	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	void in() {
+		//frame fr;
+		
+	
 		System.out.print("Jumlah cctv : ");
 		String jumlahcctv = scan.nextLine();
 		kls.setJumlahcctv(jumlahcctv);
